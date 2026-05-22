@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Greenwood Public School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__contact">
+        <a href="tel:+919876543210"><i class="fa-solid fa-phone"></i> +91 98765 43210</a>
+        <a href="mailto:info@greenwood.edu"><i class="fa-solid fa-envelope"></i> info@greenwood.edu</a>
+      </div>
+      <div class="topbar__right">
+        <div class="lang-switch" id="langSwitch">
+          <button data-lang="en" class="active">EN</button>
+          <button data-lang="hi">हिं</button>
+        </div>
+        <div class="topbar__social">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <img src="https://api.iconify.design/mdi/school.svg?color=%2300695c" alt="logo" />
+        <div class="logo__text">
+          <span class="logo__name">Greenwood</span>
+          <span class="logo__sub" data-en="Public School" data-hi="पब्लिक स्कूल">Public School</span>
+        </div>
+      </a>
+      <button class="nav-toggle" id="navToggle"><i class="fa-solid fa-bars"></i></button>
+      <nav class="nav" id="nav">
+        <a href="index.html" data-en="Home" data-hi="होम">Home</a>
+        <a href="index.html#about" data-en="About" data-hi="हमारे बारे में">About</a>
+        <a href="index.html#programs" data-en="Academics" data-hi="शिक्षा">Academics</a>
+        <a href="gallery.html" class="active" data-en="Gallery" data-hi="गैलरी">Gallery</a>
+        <a href="contact.html" data-en="Contact" data-hi="संपर्क">Contact</a>
+        <a href="admission.html" class="btn btn--primary btn--sm" data-en="Admission" data-hi="प्रवेश">Admission</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-banner">
+    <div class="container">
+      <h1 data-en="Photo Gallery" data-hi="फोटो गैलरी">Photo Gallery</h1>
+      <p data-en="Home › Gallery" data-hi="होम › गैलरी">Home › Gallery</p>
+    </div>
+  </section>
+
+  <!-- Filter -->
+  <section class="gallery-page">
+    <div class="container">
+      <div class="gal-filter" id="galFilter">
+        <button class="active" data-filter="all" data-en="All" data-hi="सभी">All</button>
+        <button data-filter="campus" data-en="Campus" data-hi="कैंपस">Campus</button>
+        <button data-filter="events" data-en="Events" data-hi="कार्यक्रम">Events</button>
+        <button data-filter="sports" data-en="Sports" data-hi="खेल">Sports</button>
+        <button data-filter="cultural" data-en="Cultural" data-hi="सांस्कृतिक">Cultural</button>
+        <button data-filter="academics" data-en="Academics" data-hi="शिक्षा">Academics</button>
+      </div>
+
+      <div class="gal-grid-page" id="galleryGrid">
+        <figure class="gal-item" data-cat="campus">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80" alt="Classroom" />
+          <figcaption data-en="Smart Classroom" data-hi="स्मार्ट क्लासरूम">Smart Classroom</figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="academics">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80" alt="Library" />
+          <figcaption data-en="Library" data-hi="पुस्तकालय">Library</figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="academics">
+          <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&q=80" alt="Lab" />
+          <figcaption data-en="Science Lab" data-hi="विज्ञान प्रयोगशाला">Science Lab</figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="sports">
+          <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=800&q=80" alt="Sports" />
+          <figcaption data-en="Annual Sports Day" data-hi="वार्षिक खेल दिवस">Annual Sports Day</figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="events">
+          <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800&q=80" alt="Event" />
+          <figcaption data-en="Independence Day" data-hi="स्वतंत्रता दिवस">Independence Day</figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="cultural">
+          <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=800&q=80" alt="Cultural" />
+          <figcaption data-en="Cultural Fest" data-hi="सांस्कृतिक उत्सव">Cultural Fest</figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="campus">
+          <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80" alt="Campus" />
+          <figcaption data-en="School Campus" data-hi="स्कूल कैंपस">School Campus</figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="sports">
+          <img src="https://images.unsplash.com/photo-1607627000458-210e8d2bdb1d?w=800&q=80" alt="Football" />
+          <figcaption data-en="Football Match" data-hi="फुटबॉल मैच">Football Match</figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="academics">
+          <img src="https://images.unsplash.com/photo-1610484826917-0f101a7a23c1?w=800&q=80" alt="Computer Lab" />
+          <figcaption data-en="Computer Lab" data-hi="कंप्यूटर लैब">Computer Lab</figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="events">
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80" alt="Annual Day" />
+          <figcaption data-en="Annual Day" data-hi="वार्षिकोत्सव">Annual Day</figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="cultural">
+          <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=80" alt="Dance" />
+          <figcaption data-en="Dance Performance" data-hi="नृत्य प्रदर्शन">Dance Performance</figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="campus">
+          <img src="https://images.unsplash.com/photo-1581726690015-c9861fa5057f?w=800&q=80" alt="Garden" />
+          <figcaption data-en="Garden" data-hi="उद्यान">Garden</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" id="lbClose"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lb-prev" id="lbPrev"><i class="fa-solid fa-chevron-left"></i></button>
+    <img id="lbImg" alt="" />
+    <button class="lb-next" id="lbNext"><i class="fa-solid fa-chevron-right"></i></button>
+    <p class="lb-caption" id="lbCaption"></p>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <div class="logo logo--light">
+          <img src="https://api.iconify.design/mdi/school.svg?color=%23ffffff" alt="logo" />
+          <div class="logo__text"><span class="logo__name">Greenwood</span><span class="logo__sub">Public School</span></div>
+        </div>
+        <p class="footer__about" data-en="A CBSE school since 1999." data-hi="1999 से सीबीएसई स्कूल।">A CBSE school since 1999.</p>
+        <div class="footer__social">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 data-en="Quick Links" data-hi="त्वरित लिंक">Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="index.html" data-en="Home" data-hi="होम">Home</a></li>
+          <li><a href="admission.html" data-en="Admission" data-hi="प्रवेश">Admission</a></li>
+          <li><a href="contact.html" data-en="Contact" data-hi="संपर्क">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-en="Contact" data-hi="संपर्क">Contact</h4>
+        <ul class="footer__contact">
+          <li><i class="fa-solid fa-location-dot"></i> 123 School Lane, New Delhi</li>
+          <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+          <li><i class="fa-solid fa-envelope"></i> info@greenwood.edu</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom"><div class="container"><p>&copy; 2026 Greenwood Public School.</p></div></div>
+  </footer>
+
+  <a href="https://wa.me/919876543210" class="fab-whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -6,15 +6,10 @@
   <meta name="description" content="Greenwood Public School - A premier CBSE school offering quality education from pre-primary to senior secondary." />
   <title>Greenwood Public School | Home</title>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome Icons (CDN) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -26,11 +21,17 @@
         <a href="tel:+919876543210"><i class="fa-solid fa-phone"></i> +91 98765 43210</a>
         <a href="mailto:info@greenwood.edu"><i class="fa-solid fa-envelope"></i> info@greenwood.edu</a>
       </div>
-      <div class="topbar__social">
-        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      <div class="topbar__right">
+        <div class="lang-switch" id="langSwitch">
+          <button data-lang="en" class="active">EN</button>
+          <button data-lang="hi">हिं</button>
+        </div>
+        <div class="topbar__social">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
       </div>
     </div>
   </div>
@@ -38,11 +39,11 @@
   <!-- ========== HEADER / NAVBAR ========== -->
   <header class="header">
     <div class="container header__inner">
-      <a href="#" class="logo">
-        <img src="https://api.iconify.design/mdi/school.svg?color=%2300695c" alt="Greenwood logo" />
+      <a href="index.html" class="logo">
+        <img src="https://api.iconify.design/mdi/school.svg?color=%2300695c" alt="logo" />
         <div class="logo__text">
           <span class="logo__name">Greenwood</span>
-          <span class="logo__sub">Public School</span>
+          <span class="logo__sub" data-en="Public School" data-hi="पब्लिक स्कूल">Public School</span>
         </div>
       </a>
 
@@ -51,67 +52,81 @@
       </button>
 
       <nav class="nav" id="nav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#programs">Academics</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#events">Events</a>
-        <a href="#contact">Contact</a>
-        <a href="#admission" class="btn btn--primary btn--sm">Admission</a>
+        <a href="index.html" class="active" data-en="Home" data-hi="होम">Home</a>
+        <a href="index.html#about" data-en="About" data-hi="हमारे बारे में">About</a>
+        <a href="index.html#programs" data-en="Academics" data-hi="शिक्षा">Academics</a>
+        <a href="gallery.html" data-en="Gallery" data-hi="गैलरी">Gallery</a>
+        <a href="contact.html" data-en="Contact" data-hi="संपर्क">Contact</a>
+        <a href="admission.html" class="btn btn--primary btn--sm" data-en="Admission" data-hi="प्रवेश">Admission</a>
       </nav>
     </div>
   </header>
 
   <!-- ========== HERO ========== -->
   <section class="hero" id="home">
-    <div class="hero__overlay"></div>
     <div class="container hero__content">
-      <p class="hero__eyebrow"><i class="fa-solid fa-graduation-cap"></i> Admissions Open 2026-27</p>
-      <h1 class="hero__title">Shaping Young Minds for a Brighter Tomorrow</h1>
-      <p class="hero__subtitle">A CBSE-affiliated co-educational school with 25+ years of academic excellence, sports, and holistic development.</p>
+      <p class="hero__eyebrow"><i class="fa-solid fa-graduation-cap"></i>
+        <span data-en="Admissions Open 2026-27" data-hi="प्रवेश खुले 2026-27">Admissions Open 2026-27</span>
+      </p>
+      <h1 class="hero__title"
+        data-en="Shaping Young Minds for a Brighter Tomorrow"
+        data-hi="उज्जवल कल के लिए नन्हें मन को आकार देना">
+        Shaping Young Minds for a Brighter Tomorrow
+      </h1>
+      <p class="hero__subtitle"
+        data-en="A CBSE-affiliated co-educational school with 25+ years of academic excellence, sports, and holistic development."
+        data-hi="सीबीएसई संबद्ध सह-शैक्षिक विद्यालय, 25+ वर्षों से शैक्षिक उत्कृष्टता, खेल और सर्वांगीण विकास के साथ।">
+        A CBSE-affiliated co-educational school with 25+ years of academic excellence, sports, and holistic development.
+      </p>
       <div class="hero__cta">
-        <a href="#admission" class="btn btn--primary"><i class="fa-solid fa-pen-to-square"></i> Apply Now</a>
-        <a href="#about" class="btn btn--ghost">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="admission.html" class="btn btn--primary"><i class="fa-solid fa-pen-to-square"></i>
+          <span data-en="Apply Now" data-hi="आवेदन करें">Apply Now</span>
+        </a>
+        <a href="#about" class="btn btn--ghost">
+          <span data-en="Learn More" data-hi="और जानें">Learn More</span> <i class="fa-solid fa-arrow-right"></i>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ========== QUICK INFO CARDS ========== -->
+  <!-- ========== QUICK INFO ========== -->
   <section class="quickinfo">
     <div class="container quickinfo__grid">
       <div class="qi-card">
         <i class="fa-solid fa-certificate qi-card__icon"></i>
-        <h4>CBSE Affiliated</h4>
-        <p>Aff. No. 1234567</p>
+        <h4 data-en="CBSE Affiliated" data-hi="सीबीएसई संबद्ध">CBSE Affiliated</h4>
+        <p data-en="Aff. No. 1234567" data-hi="संबद्धता नं. 1234567">Aff. No. 1234567</p>
       </div>
       <div class="qi-card">
         <i class="fa-solid fa-calendar-days qi-card__icon"></i>
-        <h4>Established</h4>
-        <p>Since 1999</p>
+        <h4 data-en="Established" data-hi="स्थापित">Established</h4>
+        <p data-en="Since 1999" data-hi="1999 से">Since 1999</p>
       </div>
       <div class="qi-card">
         <i class="fa-solid fa-user-graduate qi-card__icon"></i>
         <h4>2,500+</h4>
-        <p>Happy Students</p>
+        <p data-en="Happy Students" data-hi="खुश छात्र">Happy Students</p>
       </div>
       <div class="qi-card">
         <i class="fa-solid fa-chalkboard-user qi-card__icon"></i>
         <h4>120+</h4>
-        <p>Expert Teachers</p>
+        <p data-en="Expert Teachers" data-hi="अनुभवी शिक्षक">Expert Teachers</p>
       </div>
     </div>
   </section>
 
-  <!-- ========== NOTICE BOARD / TICKER ========== -->
+  <!-- ========== NOTICE TICKER ========== -->
   <section class="notice">
     <div class="container notice__inner">
-      <span class="notice__label"><i class="fa-solid fa-bullhorn"></i> Latest News</span>
+      <span class="notice__label"><i class="fa-solid fa-bullhorn"></i>
+        <span data-en="Latest News" data-hi="ताज़ा खबर">Latest News</span>
+      </span>
       <div class="notice__track">
         <div class="notice__items">
-          <span>Admissions open for session 2026-27. Apply online now!</span>
-          <span>Annual Sports Day on 15th December.</span>
-          <span>Our students bagged 3 medals in the State Science Olympiad.</span>
-          <span>Parent-Teacher Meeting scheduled for 28th November.</span>
+          <span data-en="Admissions open for session 2026-27. Apply online now!" data-hi="सत्र 2026-27 के लिए प्रवेश खुले। अभी आवेदन करें!">Admissions open for session 2026-27. Apply online now!</span>
+          <span data-en="Annual Sports Day on 15th December." data-hi="वार्षिक खेल दिवस 15 दिसंबर को।">Annual Sports Day on 15th December.</span>
+          <span data-en="Our students bagged 3 medals in the State Science Olympiad." data-hi="हमारे छात्रों ने राज्य विज्ञान ओलंपियाड में 3 पदक जीते।">Our students bagged 3 medals in the State Science Olympiad.</span>
+          <span data-en="Parent-Teacher Meeting on 28th November." data-hi="अभिभावक-शिक्षक बैठक 28 नवंबर को।">Parent-Teacher Meeting on 28th November.</span>
         </div>
       </div>
     </div>
@@ -121,19 +136,22 @@
   <section class="about" id="about">
     <div class="container about__grid">
       <div class="about__media">
-        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=900&q=80" alt="Students at school" />
+        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=900&q=80" alt="Students" />
       </div>
       <div class="about__text">
-        <p class="eyebrow">About Our School</p>
-        <h2>A Legacy of Excellence in Education</h2>
-        <p>At Greenwood Public School, we nurture curious minds, kind hearts, and confident leaders. Our balanced curriculum blends academics, arts, sports, and values to prepare students for real-world success.</p>
+        <p class="eyebrow" data-en="About Our School" data-hi="हमारे स्कूल के बारे में">About Our School</p>
+        <h2 data-en="A Legacy of Excellence in Education" data-hi="शिक्षा में उत्कृष्टता की विरासत">A Legacy of Excellence in Education</h2>
+        <p data-en="At Greenwood Public School, we nurture curious minds, kind hearts, and confident leaders. Our balanced curriculum blends academics, arts, sports, and values to prepare students for real-world success."
+           data-hi="ग्रीनवुड पब्लिक स्कूल में, हम जिज्ञासु मन, दयालु हृदय और आत्मविश्वासी नेताओं का पोषण करते हैं। हमारा संतुलित पाठ्यक्रम शिक्षा, कला, खेल और मूल्यों का मिश्रण है।">
+          At Greenwood Public School, we nurture curious minds, kind hearts, and confident leaders. Our balanced curriculum blends academics, arts, sports, and values to prepare students for real-world success.
+        </p>
         <ul class="about__list">
-          <li><i class="fa-solid fa-circle-check"></i> Smart classrooms with digital boards</li>
-          <li><i class="fa-solid fa-circle-check"></i> Well-equipped science & computer labs</li>
-          <li><i class="fa-solid fa-circle-check"></i> Spacious playgrounds & sports facilities</li>
-          <li><i class="fa-solid fa-circle-check"></i> Safe transport with GPS tracking</li>
+          <li><i class="fa-solid fa-circle-check"></i> <span data-en="Smart classrooms with digital boards" data-hi="डिजिटल बोर्ड वाले स्मार्ट क्लासरूम">Smart classrooms with digital boards</span></li>
+          <li><i class="fa-solid fa-circle-check"></i> <span data-en="Well-equipped science & computer labs" data-hi="सुसज्जित विज्ञान और कंप्यूटर लैब">Well-equipped science & computer labs</span></li>
+          <li><i class="fa-solid fa-circle-check"></i> <span data-en="Spacious playgrounds & sports facilities" data-hi="विशाल खेल का मैदान और खेल सुविधाएं">Spacious playgrounds & sports facilities</span></li>
+          <li><i class="fa-solid fa-circle-check"></i> <span data-en="Safe transport with GPS tracking" data-hi="जीपीएस ट्रैकिंग के साथ सुरक्षित परिवहन">Safe transport with GPS tracking</span></li>
         </ul>
-        <a href="#" class="btn btn--primary">Read More</a>
+        <a href="#" class="btn btn--primary" data-en="Read More" data-hi="और पढ़ें">Read More</a>
       </div>
     </div>
   </section>
@@ -142,35 +160,35 @@
   <section class="programs" id="programs">
     <div class="container">
       <header class="section-head">
-        <p class="eyebrow">Academics</p>
-        <h2>Our Programs</h2>
-        <p class="muted">From early learners to graduating seniors, every stage is designed for growth.</p>
+        <p class="eyebrow" data-en="Academics" data-hi="शिक्षा">Academics</p>
+        <h2 data-en="Our Programs" data-hi="हमारे कार्यक्रम">Our Programs</h2>
+        <p class="muted" data-en="From early learners to graduating seniors, every stage is designed for growth." data-hi="शुरुआती शिक्षार्थियों से लेकर वरिष्ठ छात्रों तक, हर चरण विकास के लिए डिज़ाइन किया गया है।">From early learners to graduating seniors, every stage is designed for growth.</p>
       </header>
 
       <div class="prog-grid">
         <article class="prog-card">
           <div class="prog-card__icon"><i class="fa-solid fa-baby"></i></div>
-          <h3>Pre-Primary</h3>
-          <p>Nursery to UKG • Play-based learning</p>
-          <a href="#">Explore <i class="fa-solid fa-arrow-right"></i></a>
+          <h3 data-en="Pre-Primary" data-hi="प्री-प्राइमरी">Pre-Primary</h3>
+          <p data-en="Nursery to UKG • Play-based learning" data-hi="नर्सरी से UKG • खेल आधारित शिक्षा">Nursery to UKG • Play-based learning</p>
+          <a href="#" data-en="Explore" data-hi="देखें">Explore</a> <i class="fa-solid fa-arrow-right"></i>
         </article>
         <article class="prog-card">
           <div class="prog-card__icon"><i class="fa-solid fa-book-open-reader"></i></div>
-          <h3>Primary</h3>
-          <p>Class I to V • Foundation building</p>
-          <a href="#">Explore <i class="fa-solid fa-arrow-right"></i></a>
+          <h3 data-en="Primary" data-hi="प्राइमरी">Primary</h3>
+          <p data-en="Class I to V • Foundation building" data-hi="कक्षा I से V • नींव निर्माण">Class I to V • Foundation building</p>
+          <a href="#" data-en="Explore" data-hi="देखें">Explore</a> <i class="fa-solid fa-arrow-right"></i>
         </article>
         <article class="prog-card">
           <div class="prog-card__icon"><i class="fa-solid fa-flask"></i></div>
-          <h3>Secondary</h3>
-          <p>Class VI to X • CBSE curriculum</p>
-          <a href="#">Explore <i class="fa-solid fa-arrow-right"></i></a>
+          <h3 data-en="Secondary" data-hi="माध्यमिक">Secondary</h3>
+          <p data-en="Class VI to X • CBSE curriculum" data-hi="कक्षा VI से X • सीबीएसई पाठ्यक्रम">Class VI to X • CBSE curriculum</p>
+          <a href="#" data-en="Explore" data-hi="देखें">Explore</a> <i class="fa-solid fa-arrow-right"></i>
         </article>
         <article class="prog-card">
           <div class="prog-card__icon"><i class="fa-solid fa-graduation-cap"></i></div>
-          <h3>Sr. Secondary</h3>
-          <p>XI–XII • Science, Commerce, Humanities</p>
-          <a href="#">Explore <i class="fa-solid fa-arrow-right"></i></a>
+          <h3 data-en="Sr. Secondary" data-hi="वरिष्ठ माध्यमिक">Sr. Secondary</h3>
+          <p data-en="XI–XII • Science, Commerce, Humanities" data-hi="XI–XII • विज्ञान, वाणिज्य, मानविकी">XI–XII • Science, Commerce, Humanities</p>
+          <a href="#" data-en="Explore" data-hi="देखें">Explore</a> <i class="fa-solid fa-arrow-right"></i>
         </article>
       </div>
     </div>
@@ -180,17 +198,17 @@
   <section class="features">
     <div class="container">
       <header class="section-head">
-        <p class="eyebrow">Why Choose Us</p>
-        <h2>Everything Your Child Needs</h2>
+        <p class="eyebrow" data-en="Why Choose Us" data-hi="हमें क्यों चुनें">Why Choose Us</p>
+        <h2 data-en="Everything Your Child Needs" data-hi="आपके बच्चे को जो चाहिए">Everything Your Child Needs</h2>
       </header>
 
       <div class="feat-grid">
-        <div class="feat"><i class="fa-solid fa-chalkboard-user"></i><h4>Expert Faculty</h4><p>Trained, caring, experienced.</p></div>
-        <div class="feat"><i class="fa-solid fa-microscope"></i><h4>Modern Labs</h4><p>Physics, Chem, Bio, Computer.</p></div>
-        <div class="feat"><i class="fa-solid fa-futbol"></i><h4>Sports</h4><p>Cricket, football, athletics.</p></div>
-        <div class="feat"><i class="fa-solid fa-book"></i><h4>Library</h4><p>10,000+ books & e-resources.</p></div>
-        <div class="feat"><i class="fa-solid fa-bus"></i><h4>Safe Transport</h4><p>GPS-tracked buses.</p></div>
-        <div class="feat"><i class="fa-solid fa-video"></i><h4>CCTV Campus</h4><p>24x7 surveillance.</p></div>
+        <div class="feat"><i class="fa-solid fa-chalkboard-user"></i><h4 data-en="Expert Faculty" data-hi="अनुभवी शिक्षक">Expert Faculty</h4><p data-en="Trained, caring, experienced." data-hi="प्रशिक्षित, देखभाल करने वाले।">Trained, caring, experienced.</p></div>
+        <div class="feat"><i class="fa-solid fa-microscope"></i><h4 data-en="Modern Labs" data-hi="आधुनिक प्रयोगशालाएं">Modern Labs</h4><p data-en="Physics, Chem, Bio, Computer." data-hi="भौतिकी, रसायन, जीव, कंप्यूटर।">Physics, Chem, Bio, Computer.</p></div>
+        <div class="feat"><i class="fa-solid fa-futbol"></i><h4 data-en="Sports" data-hi="खेल">Sports</h4><p data-en="Cricket, football, athletics." data-hi="क्रिकेट, फुटबॉल, एथलेटिक्स।">Cricket, football, athletics.</p></div>
+        <div class="feat"><i class="fa-solid fa-book"></i><h4 data-en="Library" data-hi="पुस्तकालय">Library</h4><p data-en="10,000+ books & e-resources." data-hi="10,000+ पुस्तकें और ई-संसाधन।">10,000+ books & e-resources.</p></div>
+        <div class="feat"><i class="fa-solid fa-bus"></i><h4 data-en="Safe Transport" data-hi="सुरक्षित परिवहन">Safe Transport</h4><p data-en="GPS-tracked buses." data-hi="जीपीएस ट्रैक्ड बसें।">GPS-tracked buses.</p></div>
+        <div class="feat"><i class="fa-solid fa-video"></i><h4 data-en="CCTV Campus" data-hi="सीसीटीवी कैंपस">CCTV Campus</h4><p data-en="24x7 surveillance." data-hi="24x7 निगरानी।">24x7 surveillance.</p></div>
       </div>
     </div>
   </section>
@@ -199,80 +217,92 @@
   <section class="events" id="events">
     <div class="container">
       <header class="section-head">
-        <p class="eyebrow">What's Happening</p>
-        <h2>Upcoming Events</h2>
+        <p class="eyebrow" data-en="What's Happening" data-hi="क्या हो रहा है">What's Happening</p>
+        <h2 data-en="Upcoming Events" data-hi="आगामी कार्यक्रम">Upcoming Events</h2>
       </header>
 
       <div class="event-list">
         <article class="event">
           <div class="event__date"><span class="d">15</span><span class="m">DEC</span></div>
           <div class="event__body">
-            <h4>Annual Sports Day</h4>
-            <p><i class="fa-solid fa-clock"></i> 9:00 AM &nbsp; <i class="fa-solid fa-location-dot"></i> School Ground</p>
+            <h4 data-en="Annual Sports Day" data-hi="वार्षिक खेल दिवस">Annual Sports Day</h4>
+            <p><i class="fa-solid fa-clock"></i> 9:00 AM &nbsp; <i class="fa-solid fa-location-dot"></i>
+              <span data-en="School Ground" data-hi="स्कूल मैदान">School Ground</span>
+            </p>
           </div>
         </article>
         <article class="event">
           <div class="event__date"><span class="d">22</span><span class="m">DEC</span></div>
           <div class="event__body">
-            <h4>Christmas Celebration</h4>
-            <p><i class="fa-solid fa-clock"></i> 11:00 AM &nbsp; <i class="fa-solid fa-location-dot"></i> Auditorium</p>
+            <h4 data-en="Christmas Celebration" data-hi="क्रिसमस उत्सव">Christmas Celebration</h4>
+            <p><i class="fa-solid fa-clock"></i> 11:00 AM &nbsp; <i class="fa-solid fa-location-dot"></i>
+              <span data-en="Auditorium" data-hi="ऑडिटोरियम">Auditorium</span>
+            </p>
           </div>
         </article>
         <article class="event">
           <div class="event__date"><span class="d">26</span><span class="m">JAN</span></div>
           <div class="event__body">
-            <h4>Republic Day</h4>
-            <p><i class="fa-solid fa-clock"></i> 8:00 AM &nbsp; <i class="fa-solid fa-location-dot"></i> Main Campus</p>
+            <h4 data-en="Republic Day" data-hi="गणतंत्र दिवस">Republic Day</h4>
+            <p><i class="fa-solid fa-clock"></i> 8:00 AM &nbsp; <i class="fa-solid fa-location-dot"></i>
+              <span data-en="Main Campus" data-hi="मुख्य कैंपस">Main Campus</span>
+            </p>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ========== GALLERY ========== -->
+  <!-- ========== GALLERY PREVIEW ========== -->
   <section class="gallery" id="gallery">
     <div class="container">
       <header class="section-head">
-        <p class="eyebrow">Glimpses</p>
-        <h2>Campus Gallery</h2>
+        <p class="eyebrow" data-en="Glimpses" data-hi="झलकियाँ">Glimpses</p>
+        <h2 data-en="Campus Gallery" data-hi="कैंपस गैलरी">Campus Gallery</h2>
       </header>
 
       <div class="gal-grid">
         <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80" alt="Classroom" />
         <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80" alt="Library" />
-        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&q=80" alt="Science lab" />
+        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&q=80" alt="Lab" />
         <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=600&q=80" alt="Sports" />
         <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&q=80" alt="Activity" />
         <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=600&q=80" alt="Cultural" />
       </div>
 
       <div class="text-center">
-        <a href="#" class="btn btn--ghost">View Full Gallery <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="gallery.html" class="btn btn--ghost">
+          <span data-en="View Full Gallery" data-hi="पूरी गैलरी देखें">View Full Gallery</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ========== STATS COUNTER ========== -->
+  <!-- ========== STATS ========== -->
   <section class="stats">
     <div class="container stats__grid">
-      <div class="stat"><i class="fa-solid fa-user-graduate"></i><h3>2500+</h3><p>Students</p></div>
-      <div class="stat"><i class="fa-solid fa-chalkboard-user"></i><h3>120+</h3><p>Teachers</p></div>
-      <div class="stat"><i class="fa-solid fa-trophy"></i><h3>200+</h3><p>Awards</p></div>
-      <div class="stat"><i class="fa-solid fa-calendar-days"></i><h3>25+</h3><p>Years</p></div>
+      <div class="stat"><i class="fa-solid fa-user-graduate"></i><h3>2500+</h3><p data-en="Students" data-hi="छात्र">Students</p></div>
+      <div class="stat"><i class="fa-solid fa-chalkboard-user"></i><h3>120+</h3><p data-en="Teachers" data-hi="शिक्षक">Teachers</p></div>
+      <div class="stat"><i class="fa-solid fa-trophy"></i><h3>200+</h3><p data-en="Awards" data-hi="पुरस्कार">Awards</p></div>
+      <div class="stat"><i class="fa-solid fa-calendar-days"></i><h3>25+</h3><p data-en="Years" data-hi="वर्ष">Years</p></div>
     </div>
   </section>
 
-  <!-- ========== PRINCIPAL'S MESSAGE ========== -->
+  <!-- ========== PRINCIPAL ========== -->
   <section class="principal">
     <div class="container principal__grid">
       <div class="principal__photo">
         <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=80" alt="Principal" />
       </div>
       <div class="principal__text">
-        <p class="eyebrow">Principal's Message</p>
-        <h2>"Education is the most powerful weapon."</h2>
-        <p>At Greenwood, we believe every child is unique. Our mission is to provide a safe, joyful, and stimulating environment where students grow into responsible, compassionate global citizens.</p>
-        <p class="principal__sign"><strong>Dr. Anjali Sharma</strong><br/>Principal</p>
+        <p class="eyebrow" data-en="Principal's Message" data-hi="प्रधानाचार्या का संदेश">Principal's Message</p>
+        <h2 data-en="&quot;Education is the most powerful weapon.&quot;" data-hi="&quot;शिक्षा सबसे शक्तिशाली हथियार है।&quot;">"Education is the most powerful weapon."</h2>
+        <p data-en="At Greenwood, we believe every child is unique. Our mission is to provide a safe, joyful, and stimulating environment where students grow into responsible, compassionate global citizens."
+           data-hi="ग्रीनवुड में, हम मानते हैं कि हर बच्चा अनोखा है। हमारा उद्देश्य एक सुरक्षित, आनंदमय और प्रेरक वातावरण देना है जहाँ छात्र ज़िम्मेदार और दयालु नागरिक बनें।">
+          At Greenwood, we believe every child is unique. Our mission is to provide a safe, joyful, and stimulating environment where students grow into responsible, compassionate global citizens.
+        </p>
+        <p class="principal__sign"><strong>Dr. Anjali Sharma</strong><br/><span data-en="Principal" data-hi="प्रधानाचार्या">Principal</span></p>
       </div>
     </div>
   </section>
@@ -281,37 +311,39 @@
   <section class="testi">
     <div class="container">
       <header class="section-head">
-        <p class="eyebrow">Voices</p>
-        <h2>What Parents Say</h2>
+        <p class="eyebrow" data-en="Voices" data-hi="आवाज़ें">Voices</p>
+        <h2 data-en="What Parents Say" data-hi="अभिभावक क्या कहते हैं">What Parents Say</h2>
       </header>
       <div class="testi-grid">
         <blockquote class="testi-card">
           <i class="fa-solid fa-quote-left"></i>
-          <p>The teachers are so caring. My daughter loves going to school every day.</p>
-          <footer><strong>Mrs. Priya Verma</strong><span>Parent, Class V</span></footer>
+          <p data-en="The teachers are so caring. My daughter loves going to school every day." data-hi="शिक्षक बहुत देखभाल करते हैं। मेरी बेटी रोज़ स्कूल जाना पसंद करती है।">The teachers are so caring. My daughter loves going to school every day.</p>
+          <footer><strong>Mrs. Priya Verma</strong><span data-en="Parent, Class V" data-hi="अभिभावक, कक्षा V">Parent, Class V</span></footer>
         </blockquote>
         <blockquote class="testi-card">
           <i class="fa-solid fa-quote-left"></i>
-          <p>Excellent academics combined with sports and arts. Truly holistic education.</p>
-          <footer><strong>Mr. Rahul Singh</strong><span>Parent, Class IX</span></footer>
+          <p data-en="Excellent academics combined with sports and arts. Truly holistic education." data-hi="उत्कृष्ट शिक्षा के साथ खेल और कला। सच में सर्वांगीण शिक्षा।">Excellent academics combined with sports and arts. Truly holistic education.</p>
+          <footer><strong>Mr. Rahul Singh</strong><span data-en="Parent, Class IX" data-hi="अभिभावक, कक्षा IX">Parent, Class IX</span></footer>
         </blockquote>
         <blockquote class="testi-card">
           <i class="fa-solid fa-quote-left"></i>
-          <p>The campus is safe, modern, and full of positive energy. Highly recommended.</p>
-          <footer><strong>Mrs. Neha Gupta</strong><span>Parent, Class II</span></footer>
+          <p data-en="The campus is safe, modern, and full of positive energy. Highly recommended." data-hi="कैंपस सुरक्षित, आधुनिक और सकारात्मक ऊर्जा से भरा है। अत्यधिक अनुशंसित।">The campus is safe, modern, and full of positive energy. Highly recommended.</p>
+          <footer><strong>Mrs. Neha Gupta</strong><span data-en="Parent, Class II" data-hi="अभिभावक, कक्षा II">Parent, Class II</span></footer>
         </blockquote>
       </div>
     </div>
   </section>
 
-  <!-- ========== ADMISSION CTA ========== -->
+  <!-- ========== CTA ========== -->
   <section class="cta" id="admission">
     <div class="container cta__inner">
       <div>
-        <h2>Admissions Open for 2026-27</h2>
-        <p>Limited seats. Apply online today and secure your child's future.</p>
+        <h2 data-en="Admissions Open for 2026-27" data-hi="2026-27 के लिए प्रवेश खुले">Admissions Open for 2026-27</h2>
+        <p data-en="Limited seats. Apply online today and secure your child's future." data-hi="सीमित सीटें। आज ही ऑनलाइन आवेदन करें।">Limited seats. Apply online today and secure your child's future.</p>
       </div>
-      <a href="#" class="btn btn--white"><i class="fa-solid fa-pen-to-square"></i> Apply Now</a>
+      <a href="admission.html" class="btn btn--white"><i class="fa-solid fa-pen-to-square"></i>
+        <span data-en="Apply Now" data-hi="आवेदन करें">Apply Now</span>
+      </a>
     </div>
   </section>
 
@@ -323,10 +355,10 @@
           <img src="https://api.iconify.design/mdi/school.svg?color=%23ffffff" alt="logo" />
           <div class="logo__text">
             <span class="logo__name">Greenwood</span>
-            <span class="logo__sub">Public School</span>
+            <span class="logo__sub" data-en="Public School" data-hi="पब्लिक स्कूल">Public School</span>
           </div>
         </div>
-        <p class="footer__about">A CBSE school committed to academic excellence and character building since 1999.</p>
+        <p class="footer__about" data-en="A CBSE school committed to academic excellence and character building since 1999." data-hi="1999 से शैक्षिक उत्कृष्टता और चरित्र निर्माण के लिए प्रतिबद्ध सीबीएसई स्कूल।">A CBSE school committed to academic excellence and character building since 1999.</p>
         <div class="footer__social">
           <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
           <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -336,35 +368,34 @@
       </div>
 
       <div>
-        <h4>Quick Links</h4>
+        <h4 data-en="Quick Links" data-hi="त्वरित लिंक">Quick Links</h4>
         <ul class="footer__links">
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#programs">Academics</a></li>
-          <li><a href="#admission">Admissions</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#events">Events</a></li>
+          <li><a href="index.html#about" data-en="About Us" data-hi="हमारे बारे में">About Us</a></li>
+          <li><a href="index.html#programs" data-en="Academics" data-hi="शिक्षा">Academics</a></li>
+          <li><a href="admission.html" data-en="Admissions" data-hi="प्रवेश">Admissions</a></li>
+          <li><a href="gallery.html" data-en="Gallery" data-hi="गैलरी">Gallery</a></li>
+          <li><a href="contact.html" data-en="Contact" data-hi="संपर्क">Contact</a></li>
         </ul>
       </div>
 
       <div>
-        <h4>Contact</h4>
+        <h4 data-en="Contact" data-hi="संपर्क">Contact</h4>
         <ul class="footer__contact">
-          <li><i class="fa-solid fa-location-dot"></i> 123 School Lane, New Delhi, India</li>
+          <li><i class="fa-solid fa-location-dot"></i> <span data-en="123 School Lane, New Delhi, India" data-hi="123 स्कूल लेन, नई दिल्ली, भारत">123 School Lane, New Delhi, India</span></li>
           <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
           <li><i class="fa-solid fa-envelope"></i> info@greenwood.edu</li>
-          <li><i class="fa-solid fa-clock"></i> Mon - Sat, 8 AM - 4 PM</li>
+          <li><i class="fa-solid fa-clock"></i> <span data-en="Mon - Sat, 8 AM - 4 PM" data-hi="सोम - शनि, सुबह 8 - शाम 4">Mon - Sat, 8 AM - 4 PM</span></li>
         </ul>
       </div>
     </div>
 
     <div class="footer__bottom">
       <div class="container">
-        <p>&copy; 2026 Greenwood Public School. All rights reserved.</p>
+        <p>&copy; 2026 Greenwood Public School. <span data-en="All rights reserved." data-hi="सर्वाधिकार सुरक्षित।">All rights reserved.</span></p>
       </div>
     </div>
   </footer>
 
-  <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/919876543210" class="fab-whatsapp" aria-label="WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
