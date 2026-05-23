@@ -25,6 +25,7 @@ class SSM_Shortcodes {
         add_shortcode( 'ssm_events',          array( $this, 'sc_events' ) );
         add_shortcode( 'ssm_admission_form',  array( $this, 'sc_admission_form' ) );
         add_shortcode( 'ssm_inquiry_form',    array( $this, 'sc_inquiry_form' ) );
+        add_shortcode( 'ssm_student_form',    array( $this, 'sc_student_form' ) );
         add_shortcode( 'ssm_gallery',         array( $this, 'sc_gallery' ) );
     }
 
@@ -147,5 +148,90 @@ class SSM_Shortcodes {
 
     public function sc_gallery() {
         return '<div class="ssm-public ssm-public-card"><p>Use your favourite gallery plugin alongside Smart School Manager. The plugin focuses on management — galleries can be embedded with any standard WordPress gallery shortcode.</p></div>';
+    }
+
+    /**
+     * Comprehensive frontend student registration form
+     * Usage:  [ssm_student_form]
+     */
+    public function sc_student_form() {
+        global $wpdb; $p = $wpdb->prefix . 'ssm_';
+        $classes  = $wpdb->get_results( "SELECT id, name, section FROM {$p}classes ORDER BY name" );
+        $mediums  = $wpdb->get_results( "SELECT id, name FROM {$p}mediums ORDER BY name" );
+        $types    = $wpdb->get_results( "SELECT id, name FROM {$p}student_types ORDER BY name" );
+        ob_start(); ?>
+        <div class="ssm-public ssm-public-card ssm-public-student-form">
+            <h2>Student Registration</h2>
+            <p class="ssm-muted">Fill out the form below to register a new student. Required fields are marked with *.</p>
+
+            <form class="ssm-public-form" data-ssm-public="student">
+                <h3>Personal Details</h3>
+                <div class="ssm-public-grid">
+                    <label>First Name *<input name="first_name" required></label>
+                    <label>Last Name<input name="last_name"></label>
+                </div>
+                <div class="ssm-public-grid">
+                    <label>Gender
+                        <select name="gender"><option value="male">Male</option><option value="female">Female</option><option value="other">Other</option></select>
+                    </label>
+                    <label>Date of Birth<input type="date" name="dob"></label>
+                </div>
+                <div class="ssm-public-grid">
+                    <label>Blood Group
+                        <select name="blood_group">
+                            <?php foreach ( array('','A+','A-','B+','B-','O+','O-','AB+','AB-') as $bg ) : ?><option><?php echo esc_html( $bg ); ?></option><?php endforeach; ?>
+                        </select>
+                    </label>
+                    <label>Photo URL<input name="photo" placeholder="https://..."></label>
+                </div>
+
+                <h3>Academic</h3>
+                <div class="ssm-public-grid">
+                    <label>Class *
+                        <select name="class_id" required>
+                            <option value="">— Select —</option>
+                            <?php foreach ( $classes as $c ) : ?><option value="<?php echo (int) $c->id; ?>"><?php echo esc_html( $c->name . ' ' . $c->section ); ?></option><?php endforeach; ?>
+                        </select>
+                    </label>
+                    <label>Medium
+                        <select name="medium_id">
+                            <option value="0">— Select —</option>
+                            <?php foreach ( $mediums as $m ) : ?><option value="<?php echo (int) $m->id; ?>"><?php echo esc_html( $m->name ); ?></option><?php endforeach; ?>
+                        </select>
+                    </label>
+                </div>
+                <div class="ssm-public-grid">
+                    <label>Student Type
+                        <select name="student_type_id">
+                            <option value="0">— Select —</option>
+                            <?php foreach ( $types as $t ) : ?><option value="<?php echo (int) $t->id; ?>"><?php echo esc_html( $t->name ); ?></option><?php endforeach; ?>
+                        </select>
+                    </label>
+                    <label>Roll No<input name="roll_no"></label>
+                </div>
+
+                <h3>Family</h3>
+                <div class="ssm-public-grid">
+                    <label>Father's Name<input name="father_name"></label>
+                    <label>Mother's Name<input name="mother_name"></label>
+                </div>
+                <div class="ssm-public-grid">
+                    <label>Guardian Phone *<input name="guardian_phone" required></label>
+                    <label>Email<input type="email" name="email"></label>
+                </div>
+
+                <h3>Address & Contact</h3>
+                <div class="ssm-public-grid">
+                    <label>Phone<input name="phone"></label>
+                    <label>Photo (URL)<input name="photo"></label>
+                </div>
+                <label>Full Address<textarea name="address" rows="3"></textarea></label>
+
+                <button type="submit" class="ssm-public-btn">Submit Registration</button>
+                <div class="ssm-public-result"></div>
+                <p class="ssm-muted" style="font-size:12px;margin-top:8px">Submitted forms appear in the admin under <strong>General Admin → Students</strong> with status <em>pending review</em>.</p>
+            </form>
+        </div>
+        <?php return ob_get_clean();
     }
 }

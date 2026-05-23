@@ -45,6 +45,9 @@ class SSM_Plugin {
         SSM_PDF::register();
         SSM_Export::register();
         SSM_Import::register();
+
+        // Monthly fee generator (AJAX).
+        ( new SSM_Fee_Generator() )->register();
     }
 
     public function load_textdomain() {

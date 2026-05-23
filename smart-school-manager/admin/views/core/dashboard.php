@@ -95,6 +95,55 @@ $user = wp_get_current_user();
         </div>
     </div>
 
+    <div class="ssm-grid-2">
+        <div class="ssm-card">
+            <div class="ssm-card-header"><div class="ssm-card-title"><span class="dashicons dashicons-chart-area"></span> Income vs Expenses (Last 6 Months)</div></div>
+            <canvas id="ssmFinanceChart" height="120"></canvas>
+        </div>
+        <div class="ssm-card">
+            <div class="ssm-card-header"><div class="ssm-card-title"><span class="dashicons dashicons-chart-pie"></span> Students by Gender</div></div>
+            <canvas id="ssmGenderChart" height="120"></canvas>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        if (typeof Chart === 'undefined') return;
+
+        // Demo finance data (replace with real values via REST /ssm/v1/stats).
+        var months = [];
+        for (var i = 5; i >= 0; i--) {
+            var d = new Date(); d.setMonth(d.getMonth() - i);
+            months.push(d.toLocaleString('en', { month: 'short' }));
+        }
+        var inc = [4200, 5100, 4800, 6200, 5800, <?php echo (float) $stats['income']; ?>];
+        var exp = [3000, 3400, 3100, 3700, 3500, <?php echo (float) $stats['expenses']; ?>];
+
+        new Chart(document.getElementById('ssmFinanceChart'), {
+            type: 'line',
+            data: {
+                labels: months,
+                datasets: [
+                    { label: 'Income',   data: inc, borderColor: '#10b981', backgroundColor: 'rgba(16,185,129,.1)', tension: .35, fill: true },
+                    { label: 'Expenses', data: exp, borderColor: '#ef4444', backgroundColor: 'rgba(239,68,68,.1)',  tension: .35, fill: true }
+                ]
+            },
+            options: { plugins: { legend: { position: 'bottom' } } }
+        });
+
+        var male   = <?php echo (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$p}students WHERE gender='male'" ); ?>;
+        var female = <?php echo (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$p}students WHERE gender='female'" ); ?>;
+        new Chart(document.getElementById('ssmGenderChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Male','Female'],
+                datasets: [{ data: [male||1, female||1], backgroundColor: ['#3b82f6','#ec4899'], borderWidth: 0 }]
+            },
+            options: { plugins: { legend: { position: 'bottom' } } }
+        });
+    });
+    </script>
+
     <div class="ssm-grid-3">
         <div class="ssm-card">
             <div class="ssm-card-header"><div class="ssm-card-title"><span class="dashicons dashicons-megaphone"></span> Latest Notices</div></div>

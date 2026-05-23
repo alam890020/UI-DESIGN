@@ -36,7 +36,7 @@ class SSM_Public {
         global $post;
         if ( ! $post ) return false;
         $tags = array( 'ssm_login', 'ssm_portal', 'ssm_notices', 'ssm_events',
-            'ssm_admission_form', 'ssm_inquiry_form', 'ssm_gallery' );
+            'ssm_admission_form', 'ssm_inquiry_form', 'ssm_student_form', 'ssm_gallery' );
         foreach ( $tags as $t ) {
             if ( has_shortcode( $post->post_content, $t ) ) return true;
         }
@@ -71,6 +71,21 @@ class SSM_Public {
             $clean['created_at'] = current_time( 'mysql' );
             $wpdb->insert( $p . 'inquiries', $clean );
             wp_send_json_success( array( 'message' => 'Thanks! Your inquiry has been recorded.' ) );
+        }
+
+        if ( 'student' === $type ) {
+            // Public student form -> admissions table (pending review by admin).
+            $admission = array(
+                'applicant_name' => trim( ( $clean['first_name'] ?? '' ) . ' ' . ( $clean['last_name'] ?? '' ) ),
+                'email'          => $clean['email'] ?? '',
+                'phone'          => $clean['phone'] ?? ( $clean['guardian_phone'] ?? '' ),
+                'class_id'       => (int) ( $clean['class_id'] ?? 0 ),
+                'notes'          => 'Frontend student registration. Father: ' . ( $clean['father_name'] ?? '' ) . '; Mother: ' . ( $clean['mother_name'] ?? '' ) . '; DOB: ' . ( $clean['dob'] ?? '' ),
+                'status'         => 'pending',
+                'created_at'     => current_time( 'mysql' ),
+            );
+            $wpdb->insert( $p . 'admissions', $admission );
+            wp_send_json_success( array( 'message' => 'Registration received! The school will review your application and get back to you.' ) );
         }
 
         wp_send_json_error( array( 'message' => 'Unknown form type.' ) );

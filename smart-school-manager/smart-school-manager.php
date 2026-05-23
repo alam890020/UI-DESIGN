@@ -47,6 +47,7 @@ require_once SSM_PLUGIN_DIR . 'includes/class-ssm-pdf.php';
 require_once SSM_PLUGIN_DIR . 'includes/class-ssm-export.php';
 require_once SSM_PLUGIN_DIR . 'includes/class-ssm-import.php';
 require_once SSM_PLUGIN_DIR . 'includes/class-ssm-widgets.php';
+require_once SSM_PLUGIN_DIR . 'includes/class-ssm-fee-generator.php';
 require_once SSM_PLUGIN_DIR . 'includes/class-ssm-plugin.php';
 
 // Activation / Deactivation.

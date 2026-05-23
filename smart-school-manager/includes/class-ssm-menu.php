@@ -34,6 +34,7 @@ class SSM_Menu {
                 'submenu' => array(
                     array( 'slug' => 'ssm-school-dashboard',   'label' => 'School Dashboard',     'view' => 'general/dashboard.php' ),
                     array( 'slug' => 'ssm-students',           'label' => 'Students',             'view' => 'general/students.php' ),
+                    array( 'slug' => 'ssm-student-form',       'label' => 'New Student (Wizard)', 'view' => 'general/student-form.php' ),
                     array( 'slug' => 'ssm-admissions',         'label' => 'Admissions',           'view' => 'general/admissions.php' ),
                     array( 'slug' => 'ssm-inquiries',          'label' => 'Inquiries',            'view' => 'general/inquiries.php' ),
                     array( 'slug' => 'ssm-staff',              'label' => 'Employees / Staff',    'view' => 'general/staff.php' ),
@@ -101,7 +102,9 @@ class SSM_Menu {
                 'icon'  => 'dashicons-money-alt',
                 'submenu' => array(
                     array( 'slug' => 'ssm-fees',              'label' => 'Fees',             'view' => 'accounting/fees.php' ),
+                    array( 'slug' => 'ssm-fee-generator',     'label' => 'Monthly Fee Generator', 'view' => 'accounting/fee-generator.php' ),
                     array( 'slug' => 'ssm-invoices',          'label' => 'Invoices',         'view' => 'accounting/invoices.php' ),
+                    array( 'slug' => 'ssm-invoice-print',     'label' => 'Invoice Print',    'view' => 'accounting/invoice-print.php' ),
                     array( 'slug' => 'ssm-collect-payments',  'label' => 'Collect Payments', 'view' => 'accounting/collect.php' ),
                     array( 'slug' => 'ssm-payment-history',   'label' => 'Payment History',  'view' => 'accounting/history.php' ),
                     array( 'slug' => 'ssm-concession-types',  'label' => 'Concession Types', 'view' => 'accounting/concession-types.php' ),
