@@ -1,0 +1,5 @@
+class_id,name,amount,frequency,due_day
+1,Tuition Fee,1500,monthly,5
+1,Activity Fee,200,monthly,5
+2,Tuition Fee,1800,monthly,5
+0,Library Fee,500,annually,15

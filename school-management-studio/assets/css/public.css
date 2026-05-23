@@ -1,0 +1,81 @@
+/* School Management Studio - frontend (shortcodes) */
+.sms-fp {
+    --sms-fp-primary: #7c3aed;
+    --sms-fp-cyan: #06b6d4;
+    --sms-fp-bg: #fafbff;
+    --sms-fp-card: #fff;
+    --sms-fp-border: #e6e9f2;
+    --sms-fp-text: #0b1020;
+    --sms-fp-soft: #5b6175;
+    font-family: "Inter","Segoe UI",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+    color: var(--sms-fp-text);
+}
+.sms-fp * { box-sizing: border-box; }
+
+.sms-fp-card {
+    background: var(--sms-fp-card);
+    border: 1px solid var(--sms-fp-border);
+    border-radius: 18px;
+    padding: 26px;
+    margin: 16px 0;
+    box-shadow: 0 8px 24px rgba(11,16,32,.06);
+}
+.sms-fp-card h2,
+.sms-fp-card h3 { margin: 0 0 12px; }
+.sms-fp-card h3 {
+    margin-top: 18px; padding-bottom: 6px;
+    border-bottom: 1px dashed var(--sms-fp-border);
+    color: var(--sms-fp-primary);
+    font-size: 14px; text-transform: uppercase; letter-spacing: .8px;
+}
+.sms-fp-muted { color: var(--sms-fp-soft); }
+
+.sms-fp-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+    margin-bottom: 14px;
+}
+@media (max-width: 600px) { .sms-fp-grid { grid-template-columns: 1fr; } }
+
+.sms-fp-form label {
+    display: block;
+    font-size: 12px; font-weight: 600; color: var(--sms-fp-soft);
+    margin-bottom: 12px;
+    text-transform: uppercase; letter-spacing: .5px;
+}
+.sms-fp-form input,
+.sms-fp-form select,
+.sms-fp-form textarea {
+    display: block; width: 100%; margin-top: 6px;
+    padding: 10px 14px;
+    border: 1px solid var(--sms-fp-border);
+    border-radius: 12px;
+    background: #fff;
+    color: var(--sms-fp-text);
+    font-size: 14px; outline: 0;
+    transition: border-color .15s, box-shadow .15s;
+}
+.sms-fp-form input:focus,
+.sms-fp-form select:focus,
+.sms-fp-form textarea:focus {
+    border-color: var(--sms-fp-primary);
+    box-shadow: 0 0 0 4px rgba(124,58,237,.15);
+}
+
+.sms-fp-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--sms-fp-primary), #6d28d9);
+    color: #fff;
+    padding: 12px 22px;
+    border: 0; border-radius: 12px;
+    font-weight: 600; cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 6px 16px rgba(124,58,237,.35);
+    transition: transform .15s, box-shadow .15s;
+}
+.sms-fp-btn:hover { transform: translateY(-1px); box-shadow: 0 10px 22px rgba(124,58,237,.45); color: #fff; }
+
+.sms-fp-result {
+    margin-top: 12px; font-size: 13px; font-weight: 600;
+}
+.sms-fp-result.ok    { color: #047857; }
+.sms-fp-result.error { color: #be123c; }

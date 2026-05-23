@@ -1,0 +1,63 @@
+# Copyright (C) 2025 UI-DESIGN
+# This file is distributed under GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: School Management Studio 1.0.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: school-management-studio\n"
+
+msgid "School Management Studio"
+msgstr ""
+
+msgid "Studio"
+msgstr ""
+
+msgid "Dashboard"
+msgstr ""
+
+msgid "Schools"
+msgstr ""
+
+msgid "Sessions"
+msgstr ""
+
+msgid "Classes & Categories"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Students"
+msgstr ""
+
+msgid "Staff"
+msgstr ""
+
+msgid "Academic"
+msgstr ""
+
+msgid "Examinations"
+msgstr ""
+
+msgid "Accounting"
+msgstr ""
+
+msgid "Library"
+msgstr ""
+
+msgid "Hostel"
+msgstr ""
+
+msgid "Transport"
+msgstr ""
+
+msgid "Live Lectures"
+msgstr ""
+
+msgid "Support Tickets"
+msgstr ""
+
+msgid "Print Center"
+msgstr ""

@@ -1,0 +1,279 @@
+# Copyright (C) 2025 UI-DESIGN
+# This file is distributed under the GPL v2 or later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: Smart School Manager 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/alam890020/UI-DESIGN/issues\n"
+"POT-Creation-Date: 2025-01-01 00:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: ssm-pot\n"
+"X-Domain: smart-school-manager\n"
+
+msgid "Smart School Manager"
+msgstr ""
+
+msgid "Dashboard"
+msgstr ""
+
+msgid "Schools"
+msgstr ""
+
+msgid "Sessions"
+msgstr ""
+
+msgid "Classes & Categories"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "General Admin"
+msgstr ""
+
+msgid "Students"
+msgstr ""
+
+msgid "Admissions"
+msgstr ""
+
+msgid "Inquiries"
+msgstr ""
+
+msgid "Employees / Staff"
+msgstr ""
+
+msgid "Roles"
+msgstr ""
+
+msgid "Admins"
+msgstr ""
+
+msgid "Certificates"
+msgstr ""
+
+msgid "Student ID Cards"
+msgstr ""
+
+msgid "Staff ID Cards"
+msgstr ""
+
+msgid "Transfer Certificates"
+msgstr ""
+
+msgid "Transfer Student"
+msgstr ""
+
+msgid "Promote"
+msgstr ""
+
+msgid "Unassign Class"
+msgstr ""
+
+msgid "Notifications"
+msgstr ""
+
+msgid "Staff Attendance"
+msgstr ""
+
+msgid "Staff Leaves"
+msgstr ""
+
+msgid "Staff Live Classes"
+msgstr ""
+
+msgid "Student Birthdays"
+msgstr ""
+
+msgid "Logs"
+msgstr ""
+
+msgid "School Settings"
+msgstr ""
+
+msgid "Setup Wizard"
+msgstr ""
+
+msgid "Class Management"
+msgstr ""
+
+msgid "Classes"
+msgstr ""
+
+msgid "Subjects"
+msgstr ""
+
+msgid "Attendance"
+msgstr ""
+
+msgid "Routines"
+msgstr ""
+
+msgid "Staff Timetable"
+msgstr ""
+
+msgid "Homework"
+msgstr ""
+
+msgid "Study Materials"
+msgstr ""
+
+msgid "Notices"
+msgstr ""
+
+msgid "Events"
+msgstr ""
+
+msgid "Activities"
+msgstr ""
+
+msgid "Meetings"
+msgstr ""
+
+msgid "Student Leaves"
+msgstr ""
+
+msgid "Student Types"
+msgstr ""
+
+msgid "Medium"
+msgstr ""
+
+msgid "Rating"
+msgstr ""
+
+msgid "Examination"
+msgstr ""
+
+msgid "Exams"
+msgstr ""
+
+msgid "Exam Groups"
+msgstr ""
+
+msgid "Results"
+msgstr ""
+
+msgid "Admit Cards"
+msgstr ""
+
+msgid "Assessment"
+msgstr ""
+
+msgid "Academic Report"
+msgstr ""
+
+msgid "Bulk Print Results"
+msgstr ""
+
+msgid "Accounting"
+msgstr ""
+
+msgid "Fees"
+msgstr ""
+
+msgid "Invoices"
+msgstr ""
+
+msgid "Collect Payments"
+msgstr ""
+
+msgid "Payment History"
+msgstr ""
+
+msgid "Concession Types"
+msgstr ""
+
+msgid "Students Concession"
+msgstr ""
+
+msgid "Income"
+msgstr ""
+
+msgid "Expenses"
+msgstr ""
+
+msgid "Financial Reports"
+msgstr ""
+
+msgid "Library"
+msgstr ""
+
+msgid "Books"
+msgstr ""
+
+msgid "Books Issued"
+msgstr ""
+
+msgid "Library Cards"
+msgstr ""
+
+msgid "Hostel"
+msgstr ""
+
+msgid "Hostels"
+msgstr ""
+
+msgid "Rooms"
+msgstr ""
+
+msgid "Transport"
+msgstr ""
+
+msgid "Routes"
+msgstr ""
+
+msgid "Vehicles"
+msgstr ""
+
+msgid "Reports"
+msgstr ""
+
+msgid "Live Lectures"
+msgstr ""
+
+msgid "Chapters"
+msgstr ""
+
+msgid "Support Tickets"
+msgstr ""
+
+msgid "Tickets"
+msgstr ""
+
+msgid "Print / Export"
+msgstr ""
+
+msgid "Print Center"
+msgstr ""
+
+msgid "Add New"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Active"
+msgstr ""
+
+msgid "Inactive"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Welcome back"
+msgstr ""
