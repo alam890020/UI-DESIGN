@@ -32,10 +32,21 @@ require_once SSM_PLUGIN_DIR . 'includes/class-ssm-activator.php';
 require_once SSM_PLUGIN_DIR . 'includes/class-ssm-deactivator.php';
 require_once SSM_PLUGIN_DIR . 'includes/class-ssm-database.php';
 require_once SSM_PLUGIN_DIR . 'includes/class-ssm-helper.php';
+require_once SSM_PLUGIN_DIR . 'includes/class-ssm-capabilities.php';
 require_once SSM_PLUGIN_DIR . 'includes/class-ssm-menu.php';
 require_once SSM_PLUGIN_DIR . 'includes/class-ssm-assets.php';
 require_once SSM_PLUGIN_DIR . 'includes/class-ssm-ajax.php';
 require_once SSM_PLUGIN_DIR . 'includes/class-ssm-router.php';
+require_once SSM_PLUGIN_DIR . 'includes/class-ssm-rest.php';
+require_once SSM_PLUGIN_DIR . 'includes/class-ssm-shortcodes.php';
+require_once SSM_PLUGIN_DIR . 'includes/class-ssm-public.php';
+require_once SSM_PLUGIN_DIR . 'includes/class-ssm-email.php';
+require_once SSM_PLUGIN_DIR . 'includes/class-ssm-notifications.php';
+require_once SSM_PLUGIN_DIR . 'includes/class-ssm-cron.php';
+require_once SSM_PLUGIN_DIR . 'includes/class-ssm-pdf.php';
+require_once SSM_PLUGIN_DIR . 'includes/class-ssm-export.php';
+require_once SSM_PLUGIN_DIR . 'includes/class-ssm-import.php';
+require_once SSM_PLUGIN_DIR . 'includes/class-ssm-widgets.php';
 require_once SSM_PLUGIN_DIR . 'includes/class-ssm-plugin.php';
 
 // Activation / Deactivation.

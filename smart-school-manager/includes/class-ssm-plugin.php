@@ -24,9 +24,27 @@ class SSM_Plugin {
         $assets = new SSM_Assets();
         add_action( 'admin_enqueue_scripts', array( $assets, 'enqueue_admin' ) );
 
-        // AJAX handlers.
+        // AJAX handlers (admin).
         $ajax = new SSM_Ajax();
         $ajax->register();
+
+        // REST API.
+        ( new SSM_REST() )->register();
+
+        // Frontend (shortcodes + assets + public AJAX).
+        ( new SSM_Shortcodes() )->register();
+        ( new SSM_Public() )->register();
+
+        // Cron jobs.
+        ( new SSM_Cron() )->register();
+
+        // Native WP dashboard widget.
+        ( new SSM_Widgets() )->register();
+
+        // Print / Export / Import endpoints.
+        SSM_PDF::register();
+        SSM_Export::register();
+        SSM_Import::register();
     }
 
     public function load_textdomain() {

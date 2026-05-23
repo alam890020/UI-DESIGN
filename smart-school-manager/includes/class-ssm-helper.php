@@ -26,6 +26,27 @@ class SSM_Helper {
     }
 
     /**
+     * URL for the frontend portal page (override via settings 'portal_page').
+     */
+    public static function portal_url() {
+        $url = self::get_setting( 'portal_url', '' );
+        if ( $url ) return $url;
+        return home_url( '/portal/' );
+    }
+
+    /**
+     * Build print URL for the unified print/PDF endpoint.
+     */
+    public static function print_url( $template, $id = 0, $autoprint = false ) {
+        return add_query_arg( array(
+            'action'    => 'ssm_print',
+            't'         => $template,
+            'id'        => $id,
+            'autoprint' => $autoprint ? 1 : 0,
+        ), admin_url( 'admin-post.php' ) );
+    }
+
+    /**
      * Format currency.
      */
     public static function money( $amount ) {

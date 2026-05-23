@@ -11,7 +11,9 @@ class SSM_Activator {
 
     public static function activate() {
         require_once SSM_PLUGIN_DIR . 'includes/class-ssm-database.php';
+        require_once SSM_PLUGIN_DIR . 'includes/class-ssm-capabilities.php';
         SSM_Database::install();
+        SSM_Capabilities::install_roles();
 
         // Default options.
         if ( false === get_option( 'ssm_settings' ) ) {
