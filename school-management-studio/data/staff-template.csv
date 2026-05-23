@@ -1,0 +1,2 @@
+employee_no,first_name,last_name,email,phone,gender,dob,role_id,designation,qualification,joining_date,salary,address,status
+EMP-001,Alice,Johnson,alice@school.edu,+1-555-3001,female,1985-02-10,3,Math Teacher,M.Sc. Mathematics,2020-06-01,45000,789 Elm St,active
