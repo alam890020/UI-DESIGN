@@ -2,6 +2,11 @@
 /**
  * Enqueue admin CSS / JS only on Smart School Manager pages.
  *
+ * No third-party JS libraries are bundled with this plugin. Pages that
+ * benefit from charts/datatables load these helpers from official CDNs
+ * at runtime. Site owners can disable CDN loads via the
+ * 'load_cdn_libs' setting.
+ *
  * @package SmartSchoolManager
  */
 
@@ -10,42 +15,46 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 class SSM_Assets {
 
     /**
-     * Map of optional bundled vendor libraries.
+     * Map of optional CDN-hosted helper libraries.
      */
     public static function vendor_map() {
         return array(
-            'chartjs'     => array( 'js' => 'vendor/chartjs/chart.umd.js' ),
-            'apexcharts'  => array( 'js' => 'vendor/apexcharts/apexcharts.min.js', 'css' => 'vendor/apexcharts/apexcharts.css' ),
-            'datatables'  => array( 'js' => 'vendor/datatables/jquery.dataTables.min.js', 'css' => 'vendor/datatables/jquery.dataTables.min.css', 'deps' => array( 'jquery' ) ),
-            'select2'     => array( 'js' => 'vendor/select2/select2.full.min.js', 'css' => 'vendor/select2/select2.min.css', 'deps' => array( 'jquery' ) ),
-            'flatpickr'   => array( 'js' => 'vendor/flatpickr/flatpickr.min.js', 'css' => 'vendor/flatpickr/flatpickr.min.css' ),
-            'sweetalert2' => array( 'js' => 'vendor/sweetalert2/sweetalert2.all.min.js', 'css' => 'vendor/sweetalert2/sweetalert2.min.css' ),
-            'quill'       => array( 'js' => 'vendor/quill/quill.min.js', 'css' => 'vendor/quill/quill.snow.css' ),
-            'moment'      => array( 'js' => 'vendor/moment/moment.min.js' ),
-            'fullcalendar'=> array( 'js' => 'vendor/fullcalendar/index.global.min.js' ),
-            'jspdf'       => array( 'js' => 'vendor/tcpdf/jspdf.umd.min.js' ),
-            'jspdf-autotable' => array( 'js' => 'vendor/tcpdf/jspdf.autotable.min.js', 'deps' => array( 'ssm-jspdf' ) ),
-            'html2canvas' => array( 'js' => 'vendor/tcpdf/html2canvas.min.js' ),
-            'fontawesome' => array( 'css' => 'vendor/fontawesome/css/all.min.css' ),
-            'bootstrap'   => array( 'js' => 'vendor/bootstrap/bootstrap.bundle.min.js', 'css' => 'vendor/bootstrap/bootstrap.min.css' ),
-            'tabler-icons'=> array( 'css' => 'vendor/tabler-icons/tabler-icons.min.css' ),
-            'leaflet'     => array( 'js' => 'vendor/leaflet/leaflet.js', 'css' => 'vendor/leaflet/leaflet.css' ),
+            'chartjs'    => array(
+                'js' => 'https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js',
+            ),
+            'datatables' => array(
+                'js'   => 'https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js',
+                'css'  => 'https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css',
+                'deps' => array( 'jquery' ),
+            ),
+            'select2'    => array(
+                'js'   => 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js',
+                'css'  => 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css',
+                'deps' => array( 'jquery' ),
+            ),
+            'flatpickr'  => array(
+                'js'  => 'https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js',
+                'css' => 'https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css',
+            ),
         );
     }
 
     /**
-     * Enqueue a bundled vendor lib by handle.
+     * Enqueue a CDN library by handle.
      */
     public static function enqueue_vendor( $handle ) {
+        if ( ! (int) SSM_Helper::get_setting( 'load_cdn_libs', 1 ) ) {
+            return;
+        }
         $map = self::vendor_map();
         if ( ! isset( $map[ $handle ] ) ) return;
         $entry = $map[ $handle ];
         $deps  = isset( $entry['deps'] ) ? $entry['deps'] : array();
         if ( ! empty( $entry['css'] ) ) {
-            wp_enqueue_style( 'ssm-' . $handle, SSM_PLUGIN_URL . $entry['css'], array(), SSM_VERSION );
+            wp_enqueue_style( 'ssm-' . $handle, $entry['css'], array(), SSM_VERSION );
         }
         if ( ! empty( $entry['js'] ) ) {
-            wp_enqueue_script( 'ssm-' . $handle, SSM_PLUGIN_URL . $entry['js'], $deps, SSM_VERSION, true );
+            wp_enqueue_script( 'ssm-' . $handle, $entry['js'], $deps, SSM_VERSION, true );
         }
     }
 
@@ -76,18 +85,11 @@ class SSM_Assets {
             'currency'=> SSM_Helper::get_setting( 'currency_sign', '$' ),
         ) );
 
-        // Auto-load Chart.js + DataTables on dashboard, fee generator, invoice print.
-        if ( in_array( $page, array( 'ssm-dashboard', 'ssm-school-dashboard', 'ssm-fee-generator',
-            'ssm-invoice-print', 'ssm-finance-reports', 'ssm-academic-report' ), true ) ) {
+        // Pull Chart.js from CDN on chart-heavy pages (graceful fallback if blocked).
+        if ( in_array( $page, array( 'ssm-dashboard', 'ssm-school-dashboard',
+            'ssm-fee-generator', 'ssm-invoice-print', 'ssm-finance-reports',
+            'ssm-academic-report' ), true ) ) {
             self::enqueue_vendor( 'chartjs' );
-            self::enqueue_vendor( 'apexcharts' );
-        }
-        if ( in_array( $page, array( 'ssm-students', 'ssm-staff', 'ssm-invoices', 'ssm-invoice-print' ), true ) ) {
-            self::enqueue_vendor( 'datatables' );
-            self::enqueue_vendor( 'select2' );
-        }
-        if ( in_array( $page, array( 'ssm-events', 'ssm-routines', 'ssm-staff-timetable' ), true ) ) {
-            self::enqueue_vendor( 'fullcalendar' );
         }
     }
 }

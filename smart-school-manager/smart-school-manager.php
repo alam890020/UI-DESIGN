@@ -3,7 +3,7 @@
  * Plugin Name:       Smart School Manager
  * Plugin URI:        https://github.com/alam890020/UI-DESIGN
  * Description:       A complete School Management System for WordPress with an attractive, modern admin UI. Manage students, staff, classes, exams, fees, library, hostel, transport, live lectures, support tickets and more — all from one beautiful dashboard.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 5.8
  * Requires PHP:      7.4
  * Author:            UI-DESIGN
@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Plugin constants.
-define( 'SSM_VERSION', '1.0.0' );
+define( 'SSM_VERSION', '1.0.1' );
 define( 'SSM_PLUGIN_FILE', __FILE__ );
 define( 'SSM_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SSM_PLUGIN_URL', plugin_dir_url( __FILE__ ) );

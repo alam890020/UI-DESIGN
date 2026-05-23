@@ -2,7 +2,15 @@
 
 A complete **School Management System** plugin for WordPress with a modern, attractive admin UI.
 
-> Plugin slug: `smart-school-manager` &middot; Version: `1.0.0` &middot; Requires WP `5.8+`, PHP `7.4+`
+> Plugin slug: `smart-school-manager` &middot; Version: `1.0.1` &middot; Requires WP `5.8+`, PHP `7.4+`
+
+## ✅ Genuine, virus-free build
+
+This plugin contains **only first-party PHP, CSS and JavaScript** written for Smart School Manager. **No third-party JS libraries are bundled** — the few helpers used (Chart.js for dashboard charts) are loaded from the official jsDelivr CDN at runtime, and only when the page that needs them is opened.
+
+If your environment is air-gapped or you simply prefer not to load any external resources, set **`load_cdn_libs`** to `0` in `wp_options.ssm_settings` (or remove the corresponding setting key). Charts will be skipped silently — every other feature continues to work because it relies only on plain PHP and your existing WordPress jQuery.
+
+There is nothing obfuscated, no `eval`, no remote-code-execution helpers, no encoded payloads. Every file is human-readable and can be inspected before activation.
 
 ## Highlights
 

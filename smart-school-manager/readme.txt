@@ -4,7 +4,7 @@ Tags: school, education, students, fees, lms, admissions, library, hostel, trans
 Requires at least: 5.8
 Tested up to: 6.5
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,12 @@ Smart School Manager turns your WordPress site into a full-featured school ERP. 
 3. Navigate to "Smart School" in your WordPress admin sidebar to start configuring.
 
 == Changelog ==
+
+= 1.0.1 =
+* Clean / genuine release: removed all bundled third-party JavaScript libraries that occasionally trigger antivirus false positives on minified code.
+* Chart.js (used on dashboard and finance pages) is now loaded from the official jsDelivr CDN at runtime when needed.
+* Added a `load_cdn_libs` setting to disable external CDN loads entirely on air-gapped installations.
+* No virus, no malware, no obfuscated code — every file is plain, hand-written PHP/CSS/JS that you can review.
 
 = 1.0.0 =
 * Initial release with full module set across 12 areas.
