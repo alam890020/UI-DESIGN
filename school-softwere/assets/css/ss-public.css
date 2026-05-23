@@ -1,0 +1,66 @@
+/* School Softwere — Frontend (Public) Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Nunito:wght@600;700;800&display=swap');
+
+:root {
+  --ss-primary: #4F46E5; --ss-secondary: #0EA5E9; --ss-success: #10B981;
+  --ss-warning: #F59E0B; --ss-danger: #EF4444; --ss-border: #E0E7FF;
+  --ss-text: #1E293B; --ss-muted: #64748B; --ss-radius: 12px;
+}
+.ss-public-login-wrap { display:flex; justify-content:center; padding:40px 16px; background:linear-gradient(135deg,#EEF2FF,#F8FAFF); min-height:60vh; }
+.ss-public-login-card { background:#fff; border-radius:var(--ss-radius); box-shadow:0 8px 40px rgba(79,70,229,0.12); padding:40px 36px; width:100%; max-width:420px; }
+.ss-public-login-header h2 { font-family:'Nunito',sans-serif; font-size:22px; font-weight:800; color:#1E1B4B; margin:0 0 6px; }
+.ss-public-login-header p { color:var(--ss-muted); font-size:14px; margin:0 0 24px; }
+.ss-pub-form-group { margin-bottom:16px; }
+.ss-pub-form-group label { display:block; font-size:13px; font-weight:500; color:var(--ss-text); margin-bottom:6px; }
+.ss-pub-form-group input { width:100%; padding:10px 14px; border:1.5px solid var(--ss-border); border-radius:8px; font-size:14px; color:var(--ss-text); transition:all .2s; box-sizing:border-box; }
+.ss-pub-form-group input:focus { outline:none; border-color:var(--ss-primary); box-shadow:0 0 0 3px rgba(79,70,229,0.1); }
+.ss-pub-btn-primary { width:100%; padding:12px; background:var(--ss-primary); color:#fff; border:none; border-radius:8px; font-family:'Inter',sans-serif; font-size:15px; font-weight:600; cursor:pointer; transition:all .2s; }
+.ss-pub-btn-primary:hover { background:#3730A3; }
+.ss-public-notice { background:#EEF2FF; border-radius:8px; padding:16px; color:var(--ss-primary); font-size:14px; }
+
+/* Noticeboard widget */
+.ss-noticeboard-widget, .ss-events-widget { font-family:'Inter',sans-serif; }
+.ss-nb-title { font-family:'Nunito',sans-serif; font-size:20px; font-weight:700; color:#1E1B4B; margin:0 0 16px; }
+.ss-nb-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0; }
+.ss-nb-item { display:flex; gap:14px; padding:14px 0; border-bottom:1px solid var(--ss-border); }
+.ss-nb-date { font-size:12px; font-weight:600; color:var(--ss-primary); background:#EEF2FF; border-radius:6px; padding:4px 10px; height:fit-content; white-space:nowrap; }
+.ss-nb-text strong { font-size:14px; font-weight:600; color:var(--ss-text); }
+.ss-nb-text p { font-size:13px; color:var(--ss-muted); margin:4px 0 0; }
+.ss-nb-empty { color:var(--ss-muted); font-size:13px; }
+.ss-events-list { list-style:none; padding:0; margin:0; }
+.ss-event-item { display:flex; align-items:center; gap:14px; padding:12px 0; border-bottom:1px solid var(--ss-border); }
+.ss-event-date-badge { background:var(--ss-primary); color:#fff; border-radius:8px; padding:8px 12px; text-align:center; min-width:50px; }
+.ss-event-day { display:block; font-family:'Nunito',sans-serif; font-size:20px; font-weight:800; line-height:1; }
+.ss-event-month { display:block; font-size:11px; text-transform:uppercase; font-weight:600; opacity:.85; }
+.ss-event-info strong { font-size:14px; font-weight:600; color:var(--ss-text); display:block; }
+.ss-event-venue { font-size:12px; color:var(--ss-muted); }
+
+/* Student portal */
+.ss-portal-wrap { font-family:'Inter',sans-serif; max-width:860px; margin:0 auto; padding:24px 16px; }
+.ss-portal-welcome { background:linear-gradient(135deg,#4F46E5,#0EA5E9); color:#fff; border-radius:var(--ss-radius); padding:28px; display:flex; align-items:center; gap:20px; margin-bottom:24px; }
+.ss-portal-avatar { width:72px; height:72px; border-radius:50%; border:3px solid rgba(255,255,255,0.4); object-fit:cover; }
+.ss-portal-welcome h2 { font-family:'Nunito',sans-serif; font-size:22px; font-weight:800; margin:0 0 6px; }
+.ss-portal-welcome p { font-size:13px; opacity:.85; margin:0; }
+.ss-portal-stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:14px; margin-bottom:24px; }
+.ss-portal-stat { background:#fff; border:1px solid var(--ss-border); border-radius:var(--ss-radius); padding:20px; text-align:center; box-shadow:0 2px 12px rgba(79,70,229,0.06); }
+.ss-portal-stat-num { font-family:'Nunito',sans-serif; font-size:24px; font-weight:800; color:var(--ss-primary); }
+.ss-portal-stat-label { font-size:12px; color:var(--ss-muted); font-weight:500; margin-top:4px; }
+.ss-portal-section { background:#fff; border:1px solid var(--ss-border); border-radius:var(--ss-radius); padding:24px; margin-bottom:20px; }
+.ss-portal-section h3 { font-family:'Nunito',sans-serif; font-size:18px; font-weight:700; color:#1E1B4B; margin:0 0 16px; }
+.ss-portal-table { width:100%; border-collapse:collapse; font-size:13px; }
+.ss-portal-table th { padding:10px 12px; background:#F8FAFF; font-weight:600; text-align:left; border-bottom:2px solid var(--ss-border); }
+.ss-portal-table td { padding:10px 12px; border-bottom:1px solid var(--ss-border); }
+.ss-portal-notice { background:#FEF3C7; border-left:4px solid var(--ss-warning); padding:14px 18px; border-radius:8px; font-size:14px; color:#92400E; }
+.ss-hw-list { display:flex; flex-direction:column; gap:12px; }
+.ss-hw-item { background:#F8FAFF; border:1px solid var(--ss-border); border-radius:8px; padding:14px 16px; }
+.ss-hw-subject { font-size:11px; font-weight:700; text-transform:uppercase; color:var(--ss-primary); letter-spacing:.05em; margin-bottom:4px; }
+.ss-hw-title strong { font-size:14px; color:var(--ss-text); }
+.ss-hw-due { font-size:12px; color:var(--ss-muted); margin-top:6px; }
+
+/* Status badges on frontend */
+.ss-badge { display:inline-flex; align-items:center; padding:3px 10px; border-radius:20px; font-size:11px; font-weight:600; }
+.ss-badge-success { background:#D1FAE5; color:#065F46; }
+.ss-badge-danger  { background:#FEE2E2; color:#991B1B; }
+.ss-badge-warning { background:#FEF3C7; color:#92400E; }
+.ss-badge-info    { background:#E0E7FF; color:#3730A3; }
+.ss-badge-secondary { background:#F1F5F9; color:#475569; }

@@ -1,0 +1,14 @@
+/* School Softwere — Print Styles */
+@media print {
+  #adminmenumain, #wpadminbar, #wpfooter, .ss-header,
+  .no-print, .ss-btn, .ss-page-title-row .ss-btn,
+  .ss-table-actions, .ss-pagination, nav, .ss-tabs { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 12px; }
+  .ss-wrap, .ss-page-content { padding: 0 !important; margin: 0 !important; }
+  .ss-card { box-shadow: none !important; border: 1px solid #ccc !important; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ccc; padding: 6px 8px; }
+  th { background: #f5f5f5 !important; }
+  a { color: #000; text-decoration: none; }
+  .ss-badge { border: 1px solid #ccc; }
+}
