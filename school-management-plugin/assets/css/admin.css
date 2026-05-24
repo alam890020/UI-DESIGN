@@ -1,0 +1,232 @@
+/* School Management Admin Styles */
+.sm-dashboard { padding: 10px 0; }
+
+/* Stats Grid */
+.sm-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+.sm-stat-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-left: 4px solid #ddd;
+}
+.sm-stat-blue { border-left-color: #2196F3; }
+.sm-stat-green { border-left-color: #4CAF50; }
+.sm-stat-orange { border-left-color: #FF9800; }
+.sm-stat-red { border-left-color: #f44336; }
+.sm-stat-purple { border-left-color: #9C27B0; }
+
+.sm-stat-icon {
+    font-size: 36px;
+    margin-right: 15px;
+}
+.sm-stat-icon .dashicons {
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+}
+.sm-stat-blue .sm-stat-icon { color: #2196F3; }
+.sm-stat-green .sm-stat-icon { color: #4CAF50; }
+.sm-stat-orange .sm-stat-icon { color: #FF9800; }
+.sm-stat-red .sm-stat-icon { color: #f44336; }
+.sm-stat-purple .sm-stat-icon { color: #9C27B0; }
+
+.sm-stat-info h3 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+.sm-stat-info p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 13px;
+}
+
+/* Dashboard Widgets */
+.sm-dashboard-widgets {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+.sm-widget {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.sm-widget h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Forms */
+.sm-form { max-width: 900px; }
+.sm-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.sm-form-group {
+    display: flex;
+    flex-direction: column;
+}
+.sm-form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+.sm-form-group input,
+.sm-form-group select,
+.sm-form-group textarea {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.sm-form-group input:focus,
+.sm-form-group select:focus,
+.sm-form-group textarea:focus {
+    border-color: #2196F3;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(33,150,243,0.1);
+}
+.sm-form-full { grid-column: 1 / -1; }
+
+/* Filters */
+.sm-filters {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.sm-filters form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.sm-filters select,
+.sm-filters input[type="text"],
+.sm-filters input[type="date"] {
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Badges */
+.sm-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: #e0e0e0;
+    color: #333;
+}
+.sm-badge-active, .sm-badge-present, .sm-badge-paid {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+.sm-badge-inactive, .sm-badge-absent, .sm-badge-overdue {
+    background: #ffebee;
+    color: #c62828;
+}
+.sm-badge-pending, .sm-badge-late {
+    background: #fff3e0;
+    color: #e65100;
+}
+.sm-badge-partial, .sm-badge-half_day {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+.sm-badge-graduated, .sm-badge-resigned {
+    background: #f3e5f5;
+    color: #6a1b9a;
+}
+.sm-badge-transferred {
+    background: #e0f2f1;
+    color: #00695c;
+}
+
+/* Two Column Layout */
+.sm-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.sm-col {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Section */
+.sm-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Responsive */
+@media (max-width: 782px) {
+    .sm-stats-grid { grid-template-columns: 1fr; }
+    .sm-dashboard-widgets { grid-template-columns: 1fr; }
+    .sm-form-grid { grid-template-columns: 1fr; }
+    .sm-two-col { grid-template-columns: 1fr; }
+}
+
+/* Tables */
+.wp-list-table {
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Nav tabs override */
+.nav-tab-wrapper { margin-bottom: 0; }
+
+/* Delete button */
+.sm-delete-btn { color: #a00 !important; }
+.sm-delete-btn:hover { color: #dc3232 !important; border-color: #dc3232 !important; }
+
+/* Pay fee modal */
+.sm-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sm-modal {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+}
+.sm-modal h3 { margin-top: 0; }
+.sm-modal .sm-form-group { margin-bottom: 15px; }
+.sm-modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
